@@ -1,10 +1,14 @@
 import { Button, TouchableOpacity, View, StyleSheet, Text } from "react-native";
+// import { useNavigation } from "@react-navigation/native";
 
-export default function HomeButtons({ title, customStyles }) {
+export default function HomeButtons({ title, customStyles, navigation }) {
+  // const navigate = useNavigation()
   return (
     <View>
       <TouchableOpacity 
       style={[styles.appButtonContainer, customStyles]}
+      // onPress={() => navigation.navigate()}
+      onPress={navigation}
       >
         <Text style={[styles.appButtonText, customStyles]}>{title}</Text>
       </TouchableOpacity>

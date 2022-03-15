@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import HomeButtons from "./HomeButtons";
 
-export default function App() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>an honest app for</Text>
@@ -10,10 +10,12 @@ export default function App() {
       <HomeButtons
         title="non-toxic support"
         customStyles={{ backgroundColor: "#537492", color: "#223c53" }}
+        navigation={() => navigation.navigate("SupportHome")}
       />
       <HomeButtons
         title="crisis kit"
         customStyles={{ backgroundColor: "#fed607", color: "#807303" }}
+        navigation={() => navigation.navigate("CrisisKitHome")}
       />
     </View>
   );
@@ -22,7 +24,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fab4b0',
     backgroundColor: "#fdd9c3",
     alignItems: "center",
     justifyContent: "center",
@@ -34,6 +35,3 @@ const styles = StyleSheet.create({
     fontSize: 118,
   },
 });
-
-
-
