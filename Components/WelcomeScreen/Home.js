@@ -34,5 +34,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 0,
     fontSize: 118,
+    color: "#303746",
   },
 });

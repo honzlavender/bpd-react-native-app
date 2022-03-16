@@ -26,26 +26,32 @@ export default function CrisisKitHome({ navigation }) {
             dot={require("../graphics/blueDot.png")}
           />
           <NavDotRight
+            navigation={() => navigation.navigate("Sketch")}
             title="drawing pad"
             dot={require("../graphics/purpleDot.png")}
           />
           <NavDotLeft
+            navigation={() => navigation.navigate("BabyAnimals")}
             title="baby animals"
             dot={require("../graphics/redDot.png")}
           />
           <NavDotRight
+            navigation={() => navigation.navigate("FlappyBird")}
             title="flappy bird"
             dot={require("../graphics/limeDot.png")}
           />
           <NavDotLeft
+            navigation={() => navigation.navigate("MemoryGame")}
             title="memory game"
             dot={require("../graphics/yellowDot.png")}
           />
           <NavDotRight
+            navigation={() => navigation.navigate("IRLKit")}
             title="diy kit irl"
             dot={require("../graphics/pinkDot.png")}
           />
           <NavDotLeft
+            navigation={() => navigation.navigate("Hotlines")}
             title="hotlines"
             dot={require("../graphics/tealDot.png")}
           />
@@ -83,7 +89,6 @@ const styles = StyleSheet.create({
   },
   //body holds dots
   body: {
-    backgroundColor: "white",
     marginTop: 5,
   },
 });

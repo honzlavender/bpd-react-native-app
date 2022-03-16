@@ -4,11 +4,7 @@ export default function NavDotLeft({ dot, title, navigation }) {
   return (
     <View>
       <TouchableOpacity onPress={navigation}>
-        <Image
-          // source={require("../graphics/blueDot.png")}
-          source={dot}
-          style={styles.leftDot}
-        />
+        <Image source={dot} style={styles.leftDot} />
         <View style={styles.dotBody}>
           <Text style={styles.dotTextLeft}>{title}</Text>
         </View>

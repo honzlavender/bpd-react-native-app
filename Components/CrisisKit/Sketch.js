@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 
-export default function MemoryGame({ navigation }) {
+export default function Sketch({ navigation }) {
   return (
     <View style={styles.container}>
       <GoBackNav navigation={navigation} />
-        <Text style={styles.playListLink}>{"memory game"}</Text>
+        <Text style={styles.playListLink}>{"sketch pad"}</Text>
     </View>
   );
 }
