@@ -17,13 +17,34 @@ export default function CrisisKitHome() {
         </View>
         <View style={styles.body}>
           {/* word game */}
-          <NavDotLeft title="word count game" dot={require("../graphics/blueDot.png")}/>
-          <NavDotRight title="drawing pad" dot={require("../graphics/purpleDot.png")}/>
-          <NavDotLeft title="baby animals" dot={require("../graphics/redDot.png")}/>
-          <NavDotRight title="flappy bird" dot={require("../graphics/limeDot.png")}/>
-          <NavDotLeft title="memory game" dot={require("../graphics/yellowDot.png")}/>
-          <NavDotRight title="diy kit irl" dot={require("../graphics/pinkDot.png")}/>
-          <NavDotLeft title="hotlines" dot={require("../graphics/tealDot.png")}/>
+          <NavDotLeft
+            title="word count game"
+            dot={require("../graphics/blueDot.png")}
+          />
+          <NavDotRight
+            title="drawing pad"
+            dot={require("../graphics/purpleDot.png")}
+          />
+          <NavDotLeft
+            title="baby animals"
+            dot={require("../graphics/redDot.png")}
+          />
+          <NavDotRight
+            title="flappy bird"
+            dot={require("../graphics/limeDot.png")}
+          />
+          <NavDotLeft
+            title="memory game"
+            dot={require("../graphics/yellowDot.png")}
+          />
+          <NavDotRight
+            title="diy kit irl"
+            dot={require("../graphics/pinkDot.png")}
+          />
+          <NavDotLeft
+            title="hotlines"
+            dot={require("../graphics/tealDot.png")}
+          />
         </View>
       </ScrollView>
     </View>
@@ -84,33 +105,3 @@ const styles = StyleSheet.create({
     color: "black",
   },
 });
-
-//      {/* drawing pad */}
-//      <Image
-//      source={require("../graphics/purpleDot.png")}
-//      style={styles.rightDot}
-//    />
-//    {/* baby animals */}
-//    <Image
-//      source={require("../graphics/redDot.png")}
-//      style={styles.leftDot}
-//    />
-//    {/* flappy bird */}
-//    <Image
-//      source={require("../graphics/limeDot.png")}
-//      style={styles.rightDot}
-//    />
-//    {/* memory game */}
-//    <Image
-//      source={require("../graphics/yellowDot.png")}
-//      style={styles.leftDot}
-//    />
-//    {/* diy crisis kit */}
-//    <Image
-//      source={require("../graphics/pinkDot.png")}
-//      style={styles.rightDot}
-//    />
-//    <Image
-//      source={require("../graphics/tealDot.png")}
-//      style={styles.leftDot}
-//    />
