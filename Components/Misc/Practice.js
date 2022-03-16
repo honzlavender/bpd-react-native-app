@@ -1,12 +1,10 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import GoBackNav from "../Misc/GoBackNav";
 import * as Linking from "expo-linking";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import AppLink from "react-native-app-link";
 
-export default function SongWordCount({ navigation }) {
+export default function Practice() {
   return (
     <View style={styles.container}>
-      <GoBackNav navigation={navigation} />
-
       <TouchableOpacity
         onPress={() => {
           Linking.openURL(
@@ -14,7 +12,7 @@ export default function SongWordCount({ navigation }) {
           );
         }}
       >
-        <Text style={styles.playListLink}>{"play list"}</Text>
+        <Text style={styles.backButton}>{"play list"}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -22,12 +20,11 @@ export default function SongWordCount({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "white",
   },
-  playListLink: {
+  //redirect to Home page
+  backButton: {
+    fontSize: 20,
     textAlign: "center",
-    margin: 36,
-    fontSize: 32,
   },
 });
