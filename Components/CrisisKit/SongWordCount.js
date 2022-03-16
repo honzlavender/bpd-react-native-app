@@ -14,7 +14,7 @@ export default function SongWordCount({ navigation }) {
           );
         }}
       >
-        <Text style={styles.playListLink}>{"play list"}</Text>
+        <Text style={styles.playListLink}>{"playlist"}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -29,5 +29,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     margin: 36,
     fontSize: 32,
+    fontWeight: 'bold',
   },
-});
+});      
