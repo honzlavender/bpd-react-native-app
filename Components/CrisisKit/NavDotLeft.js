@@ -1,16 +1,18 @@
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function NavDotLeft({ dot, title }) {
+export default function NavDotLeft({ dot, title, navigation }) {
   return (
     <View>
-      <Image
-        // source={require("../graphics/blueDot.png")}
-        source={dot}
-        style={styles.leftDot}
-      />
-      <View style={styles.dotBody}>
-        <Text style={styles.dotTextLeft}>{title}</Text>
-      </View>
+      <TouchableOpacity onPress={navigation}>
+        <Image
+          // source={require("../graphics/blueDot.png")}
+          source={dot}
+          style={styles.leftDot}
+        />
+        <View style={styles.dotBody}>
+          <Text style={styles.dotTextLeft}>{title}</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }

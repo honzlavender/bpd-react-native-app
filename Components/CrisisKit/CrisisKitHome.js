@@ -1,10 +1,4 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  ScrollView,
-  Image,
-} from "react-native";
+import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
 import BackHomeNav from "../Misc/HomeButton";
 import Footer from "../Misc/Footer";
 import NavDotLeft from "./NavDotLeft";
@@ -27,6 +21,7 @@ export default function CrisisKitHome({ navigation }) {
         <View style={styles.body}>
           {/* word game */}
           <NavDotLeft
+            navigation={() => navigation.navigate("SongWordCount")}
             title="word count game"
             dot={require("../graphics/blueDot.png")}
           />

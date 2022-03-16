@@ -1,11 +1,13 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, BackHandler } from "react-native"
 
 
-export default function BackHomeNav({ navigation }){
+export default function GoBackNav({ navigation }){
+
+
     return (
         <View style={styles.container}>
-        <TouchableOpacity onPress={navigation}>
-          <Text style={styles.backButton}>{"< home"}</Text>
+        <TouchableOpacity onPress={()=> navigation.goBack()}>
+          <Text style={styles.backButton}>{"< back"}</Text>
         </TouchableOpacity>
         </View>
     )
