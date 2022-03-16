@@ -12,7 +12,7 @@ export default function App() {
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
         <Stack.Screen name="SupportHome" component={SupportHome} />
-        <Stack.Screen name="CrisisKitHome" component={CrisisKitHome} />
+        <Stack.Screen name="CrisisKitHome" component={CrisisKitHome} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
     // <Navigator/>

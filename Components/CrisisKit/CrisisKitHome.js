@@ -1,11 +1,20 @@
-import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  Image,
+} from "react-native";
+import BackHomeNav from "../Misc/HomeButton";
+import Footer from "../Misc/Footer";
 import NavDotLeft from "./NavDotLeft";
 import NavDotRight from "./NavDotRight";
 
-export default function CrisisKitHome() {
+export default function CrisisKitHome({ navigation }) {
   return (
-    <View style={styles.container}>
-      <ScrollView>
+    <ScrollView>
+      <View style={styles.container}>
+        <BackHomeNav navigation={() => navigation.navigate("Home")} />
         <View style={styles.headerContainer}>
           <Image
             source={require("../graphics/sunshine.png")}
@@ -46,8 +55,9 @@ export default function CrisisKitHome() {
             dot={require("../graphics/tealDot.png")}
           />
         </View>
-      </ScrollView>
-    </View>
+      </View>
+      <Footer />
+    </ScrollView>
   );
 }
 
@@ -59,20 +69,20 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "flex-start",
-    margin: 20,
+    margin: 1,
   },
   textView: {
     position: "absolute",
   },
   title: {
-    marginTop: 95,
+    marginTop: 75,
     fontSize: 20,
     fontWeight: "bold",
     color: "white",
   },
   image: {
     resizeMode: "contain",
-    margin: -15,
+    margin: -35,
     width: 250,
     height: 250,
   },
@@ -80,28 +90,5 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: "white",
     marginTop: 5,
-  },
-  dotBody: {
-    position: "absolute",
-  },
-  leftDot: {
-    resizeMode: "contain",
-    width: 75,
-    height: 75,
-    marginLeft: 25,
-  },
-  rightDot: {
-    resizeMode: "contain",
-    width: 75,
-    height: 75,
-    marginLeft: 275,
-  },
-  dotTextLeft: {
-    // position: "absolute",
-    marginLeft: 60,
-    marginTop: 20,
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "black",
   },
 });

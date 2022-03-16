@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     marginLeft: 60,
     marginTop: 25,
     fontSize: 20,
-    fontWeight: "bold",
-    color: "black",
+    // fontWeight: "bold",
+    color: "#303746",
   },
 });
