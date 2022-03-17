@@ -39,11 +39,12 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   homeTitle: {
+    fontFamily: 'Fredoka-Regular',
     zIndex: 1,
     paddingHorizontal: 24,
     paddingVertical: 0,
     marginBottom: -8,
-    fontSize: 72,
+    fontSize: 52,
     color: "#303746",
   },
   pic: {
