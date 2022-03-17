@@ -47,7 +47,7 @@ export default function CrisisKitHome({ navigation }) {
           />
           <NavDotRight
             navigation={() => navigation.navigate("IRLKit")}
-            title="diy kit irl"
+            title="IRL crisis kit"
             dot={require("../graphics/pinkDot.png")}
           />
           <NavDotLeft

@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
     marginLeft: 75,
     height: 80,
     width: 160,
-    shadowColor: '#f4661c',
-    shadowOffset: { height: 4, width: 2 }, // IOS
+    shadowColor: '#005b7d',
+    shadowOffset: { height: 6, width: 6 }, // IOS
     shadowOpacity: 1, // IOS
     shadowRadius: 0, //IOS
     borderRadius: 100,

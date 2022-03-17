@@ -24,11 +24,6 @@ export default function Home({ navigation }) {
         customStyles={{ backgroundColor: "#fbdb39", color: "#807303" }}
         navigation={() => navigation.navigate("CrisisKitHome")}
       />
-
-      {/* <Image
-        style={styles.pic}
-        source={require("../graphics/background.png")}
-      /> */}
     </View>
   );
 }
@@ -53,10 +48,7 @@ const styles = StyleSheet.create({
   },
   pic: {
     resizeMode: "contain",
-    width: 500,
-    // height: 175,
-    // marginTop: -125,
-    // marginLeft: -190,
+    width: 450,
     position: "absolute",
   },
 });

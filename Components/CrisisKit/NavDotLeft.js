@@ -15,7 +15,11 @@ export default function NavDotLeft({ dot, title, navigation }) {
 
 const styles = StyleSheet.create({
   dotBody: {
+    marginLeft: 75,
+    marginTop: 20,
     position: "absolute",
+    borderRadius: 100,
+    // backgroundColor: "#fff",
   },
   leftDot: {
     resizeMode: "contain",
@@ -24,10 +28,10 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   dotTextLeft: {
-    marginLeft: 60,
-    marginTop: 25,
-    fontSize: 20,
-    // fontWeight: "bold",
+    fontSize: 18,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    fontWeight: "bold",
     color: "#303746",
   },
 });

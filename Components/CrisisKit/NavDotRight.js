@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
   },
   dotTextRight: {
     textAlign: "right",
-    marginTop: 25,
-    marginLeft: -50,
-    fontSize: 20,
-    // fontWeight: "bold",
+    marginTop: 20,
+    marginLeft: -75,
+    fontSize: 18,
+    fontWeight: "bold",
     color: "#303746",
   },
 });
