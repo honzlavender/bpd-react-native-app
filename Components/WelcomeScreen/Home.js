@@ -1,22 +1,34 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import HomeButtons from "./HomeButtons";
 
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>an honest app for</Text>
-      <Text style={styles.homeTitle}>BPD</Text>
-      <Text>because life sucks sometimes</Text>
-      <HomeButtons
+      {/* <Text>an honest app for</Text> */}
+      <Text style={styles.homeTitle}>a crisis kit</Text>
+      <Text style={styles.subTitle}>
+        for those of us with BPD & other spicy disorders
+      </Text>
+      {/* <HomeButtons
         title="non-toxic support"
         customStyles={{ backgroundColor: "#537492", color: "#223c53" }}
         navigation={() => navigation.navigate("SupportHome")}
+      /> */}
+      <Image
+        style={styles.pic}
+        source={require("../graphics/background.png")}
       />
       <HomeButtons
-        title="crisis kit"
-        customStyles={{ backgroundColor: "#fed607", color: "#807303" }}
+        smallTitle={`(chuckles)`}
+        title={`i'm in danger`}
+        customStyles={{ backgroundColor: "#fbdb39", color: "#807303" }}
         navigation={() => navigation.navigate("CrisisKitHome")}
       />
+
+      {/* <Image
+        style={styles.pic}
+        source={require("../graphics/background.png")}
+      /> */}
     </View>
   );
 }
@@ -24,16 +36,27 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "#fdd9c3",
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
+  subTitle: {
+    zIndex: 1,
+  },
   homeTitle: {
-    backgroundColor: "#fab4b0",
+    zIndex: 1,
     paddingHorizontal: 24,
     paddingVertical: 0,
-    fontSize: 118,
+    marginBottom: -8,
+    fontSize: 72,
     color: "#303746",
+  },
+  pic: {
+    resizeMode: "contain",
+    width: 500,
+    // height: 175,
+    // marginTop: -125,
+    // marginLeft: -190,
+    position: "absolute",
   },
 });

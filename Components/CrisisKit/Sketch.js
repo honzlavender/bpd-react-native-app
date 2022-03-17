@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 
 export default function Sketch({ navigation }) {
   return (
     <View style={styles.container}>
       <GoBackNav navigation={navigation} />
-        <Text style={styles.playListLink}>{"sketch pad"}</Text>
+      <Text style={styles.sketchText}>{"sketch pad"}</Text>
     </View>
   );
 }
@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
   },
-  playListLink: {
+  sketchText: {
     textAlign: "center",
     margin: 36,
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

@@ -1,16 +1,23 @@
-import { Button, TouchableOpacity, View, StyleSheet, Text } from "react-native";
+import { TouchableOpacity, View, StyleSheet, Text, Image } from "react-native";
 // import { useNavigation } from "@react-navigation/native";
 
-export default function HomeButtons({ title, customStyles, navigation }) {
+export default function HomeButtons({
+  title,
+  customStyles,
+  navigation,
+  smallTitle,
+}) {
   // const navigate = useNavigation()
   return (
     <View>
-      <TouchableOpacity 
-      style={[styles.appButtonContainer, customStyles]}
-      // onPress={() => navigation.navigate()}
-      onPress={navigation}
+      <TouchableOpacity
+        style={[styles.appButtonContainer, customStyles]}
+        // onPress={() => navigation.navigate()}
+        onPress={navigation}
       >
-        <Text style={[styles.appButtonText, customStyles]}>{title}</Text>
+          {/* customStyles let's be add individual styling to shared components */}
+          <Text style={[styles.appButtonSmallText]}>{smallTitle}</Text>
+          <Text style={[styles.appButtonText]}>{title}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -18,18 +25,30 @@ export default function HomeButtons({ title, customStyles, navigation }) {
 
 const styles = StyleSheet.create({
   appButtonContainer: {
-    marginTop: 18,
-    elevation: 8,
-    backgroundColor: "#009688",
-    borderRadius: 10,
+    justifyContent: "center",
+    marginTop: 40,
+    marginLeft: 75,
+    height: 80,
+    width: 160,
+    shadowColor: '#f4661c',
+    shadowOffset: { height: 4, width: 2 }, // IOS
+    shadowOpacity: 1, // IOS
+    shadowRadius: 0, //IOS
+    borderRadius: 100,
     paddingVertical: 10,
     paddingHorizontal: 12,
   },
   appButtonText: {
-    fontSize: 18,
-    color: "#fff",
+    textAlign: "center",
+    fontSize: 16,
     fontWeight: "bold",
-    alignSelf: "center",
+    color: "#303746",
     textTransform: "uppercase",
+  },
+  appButtonSmallText: {
+    textAlign: "center",
+    fontSize: 12,
+    color: "#303746",
+    paddingBottom: 5,
   },
 });

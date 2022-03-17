@@ -27,7 +27,7 @@ export default function CrisisKitHome({ navigation }) {
           />
           <NavDotRight
             navigation={() => navigation.navigate("Sketch")}
-            title="drawing pad"
+            title="sketch pad"
             dot={require("../graphics/purpleDot.png")}
           />
           <NavDotLeft

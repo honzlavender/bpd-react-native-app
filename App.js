@@ -1,4 +1,5 @@
 import Home from './Components/WelcomeScreen/Home'
+import axios from 'axios';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SupportHome from './Components/Support/SupportHome';
