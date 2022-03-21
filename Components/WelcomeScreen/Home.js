@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
     width: 450,
     position: "absolute",
   },
-});
+}); 
