@@ -7,7 +7,7 @@ import CrisisKitHome from "./Components/CrisisKit/CrisisKitHome";
 import SongWordCount from "./Components/CrisisKit/SongWordCount";
 import Sketch from "./Components/CrisisKit/Sketch";
 import BabyAnimals from "./Components/CrisisKit/BabyAnimals";
-import FlappyBird from "./Components/CrisisKit/FlappyBird";
+import FlappyBird from "./Components/CrisisKit/FlappyBird/FlappyBird";
 import MemoryGame from "./Components/CrisisKit/Memory/MemoryGame";
 import IRLKit from "./Components/CrisisKit/IRLKit";
 import Hotlines from "./Components/CrisisKit/Hotlines";

@@ -108,7 +108,7 @@ export default function MemoryGame({ navigation }) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <GoBackNav navigation={navigation} />
       <Text style={styles.heading}>{"memory game"}</Text>
 
@@ -135,7 +135,7 @@ export default function MemoryGame({ navigation }) {
         ) : null}
       </View>
       <Footer />
-    </SafeAreaView>
+    </View>
   );
 }
 
