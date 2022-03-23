@@ -1,27 +1,25 @@
-import { View, Text, StyleSheet, TouchableOpacity, BackHandler } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { AntDesign } from '@expo/vector-icons';
 
-
-export default function GoBackNav({ navigation }){
-
-
-    return (
-        <View style={styles.container}>
-        <TouchableOpacity onPress={()=> navigation.goBack()}>
-          <Text style={styles.backButton}>{"< back"}</Text>
-        </TouchableOpacity>
-        </View>
-    )
-};
+export default function GoBackNav({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <AntDesign name="leftcircle" style={styles.icon} />
+      </TouchableOpacity>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "flex-start",
-    },
-  //redirect to Home page
-  backButton: {
-    fontSize: 20,
-    backgroundColor: 'pink',
+  container: {
+    flex: 1,
   },
-})
+  //redirect to Home page
+  icon: {
+    fontSize: 30,
+    marginTop: 65,
+    marginLeft: 22,
+    color: 'lightblue'
+  },
+});

@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   sketchText: {
     textAlign: "center",
-    margin: 36,
+    // margin: 36,
     fontSize: 32,
     fontWeight: "bold",
   },

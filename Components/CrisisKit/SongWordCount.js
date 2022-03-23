@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   playListLink: {
     textAlign: "center",
-    margin: 36,
+    // margin: 36,
     fontSize: 32,
     fontWeight: 'bold',
   },

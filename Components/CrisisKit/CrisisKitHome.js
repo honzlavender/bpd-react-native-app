@@ -32,7 +32,7 @@ export default function CrisisKitHome({ navigation }) {
           />
           <NavDotLeft
             navigation={() => navigation.navigate("BabyAnimals")}
-            title="baby animals"
+            title="curly joe"
             dot={require("../graphics/redDot.png")}
           />
           <NavDotRight
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "flex-start",
-    margin: 1,
+    margin: 0,
+    padding: 0,
   },
   textView: {
     position: "absolute",
@@ -95,6 +96,6 @@ const styles = StyleSheet.create({
   },
   //body holds dots
   body: {
-    marginTop: 5,
+    // marginTop: 5,
   },
 });

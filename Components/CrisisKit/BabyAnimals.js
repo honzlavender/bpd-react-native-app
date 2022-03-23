@@ -41,7 +41,7 @@ const getRandomImage = () =>
   return (
     <View style={styles.container}>
       <GoBackNav navigation={navigation} />
-        <Text style={styles.playListLink}>{"baby animals"}</Text>
+        <Text style={styles.playListLink}>{"curly joe"}</Text>
         <Image
           style={{width: 100, height: 100}}
           source={{uri:'https://dog.ceo/img/dog-api-logo.svg'}}
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   playListLink: {
     textAlign: "center",
-    margin: 36,
+    // margin: 36,
     fontSize: 32,
     fontWeight: 'bold',
   },
