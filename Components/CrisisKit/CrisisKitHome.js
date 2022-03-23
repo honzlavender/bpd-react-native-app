@@ -55,6 +55,12 @@ export default function CrisisKitHome({ navigation }) {
             title="hotlines"
             dot={require("../graphics/tealDot.png")}
           />
+
+          {/* <NavDotLeft
+            navigation={() => navigation.navigate("Practice")}
+            title="practice"
+            dot={require("../graphics/tealDot.png")}
+          /> */}
         </View>
       </View>
       <Footer />

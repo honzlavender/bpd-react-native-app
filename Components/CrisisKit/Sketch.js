@@ -1,11 +1,6 @@
 // sketch.js
 
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 import { useEffect, useRef, useState } from "react";
 import Canvas from "react-native-canvas";
@@ -20,7 +15,7 @@ export default function Sketch({ navigation }) {
   //   Sketch.reload();
   // }
 
- useEffect(() => {
+  useEffect(() => {
     const canvas = canvasRef.current;
 
     // const handleCanvas = (canvas) => {
@@ -33,13 +28,11 @@ export default function Sketch({ navigation }) {
     ctx.lineWidth = 5;
     ctx.fillStyle = "pink";
     ctx.fillRect(20, 20, 300, 300);
-  // }
-});
+    // }
+  });
 
   const startDrawing = ({ nativeEvent }) => {
     //how to start a path?
-
-
     // alert('wow')
     // const { offsetX, offsetY } = nativeEvent;
     // contextRef.beginPath();
@@ -49,19 +42,13 @@ export default function Sketch({ navigation }) {
 
   const endDrawing = () => {
     //how to end a path?
-
-
     // alert('u did it')
     // contextRef.closePath();
-
     // setIsDrawing(false);
   };
 
   const draw = ({ nativeEvent }) => {
     //how to connect path??
-
-
-
     // if (!isDrawing) {
     //   return;
     // }
@@ -79,16 +66,16 @@ export default function Sketch({ navigation }) {
       </TouchableOpacity>
 
       <View
-      onTouchStart={startDrawing}
-      onTouchEnd={endDrawing}
-      onTouchMove={draw}
+        onTouchStart={startDrawing}
+        onTouchEnd={endDrawing}
+        onTouchMove={draw}
       >
-      <Canvas
-        // onTouchStart={startDrawing}
-        // onTouchEnd={endDrawing}
-        // onTouchMove={draw}
-        ref={canvasRef}
-      />
+        <Canvas
+          // onTouchStart={startDrawing}
+          // onTouchEnd={endDrawing}
+          // onTouchMove={draw}
+          ref={canvasRef}
+        />
       </View>
     </View>
   );

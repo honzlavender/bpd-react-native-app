@@ -8,18 +8,18 @@ import SongWordCount from "./Components/CrisisKit/SongWordCount";
 import Sketch from "./Components/CrisisKit/Sketch";
 import BabyAnimals from "./Components/CrisisKit/BabyAnimals";
 import FlappyBird from "./Components/CrisisKit/FlappyBird";
-import MemoryGame from "./Components/CrisisKit/MemoryGame";
+import MemoryGame from "./Components/CrisisKit/Memory/MemoryGame";
 import IRLKit from "./Components/CrisisKit/IRLKit";
 import Hotlines from "./Components/CrisisKit/Hotlines";
 
 import { useFonts } from "@use-expo/font";
 import AppLoading from "expo-app-loading";
-console.log(AppLoading)
+import Practice from "./Components/Misc/Practice";
+console.log(AppLoading);
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-
   const [isLoaded] = useFonts({
     "Monofett-Regular": require("./assets/Fonts/Monofett-Regular.ttf"),
     "Fredoka-Regular": require("./assets/Fonts/Fredoka/Fredoka-Regular.ttf"),
@@ -75,6 +75,12 @@ export default function App() {
           <Stack.Screen
             name="Hotlines"
             component={Hotlines}
+            options={{ headerShown: false }}
+          />
+
+          <Stack.Screen
+            name="Practice"
+            component={Practice}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

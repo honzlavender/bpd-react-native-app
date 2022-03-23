@@ -15,9 +15,9 @@ export default function GoBackNav({ navigation }){
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
-        paddingTop: 54,
-        paddingLeft: 24,
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "flex-start",
     },
   //redirect to Home page
   backButton: {
