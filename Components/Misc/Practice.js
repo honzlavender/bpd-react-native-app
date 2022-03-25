@@ -1,42 +1,38 @@
-import React from "react";
-import { Alert, Button, View } from "react-native";
+import React, { useCallback, useState } from "react";
+import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
+import axios from "axios";
 
-export default function Practice() {
-  // constructor(props)
-  //   super(props);
+export default function Practice( {navigation}) {
+  const DogAPI = axios.create({
+    baseURL: 'https://api.thedogapi.com',
+  });
 
-  this.state = {
-    imageUrl: "https://dog.ceo/img/dog-api-logo.svg",
-  };
+  const onPress = () => {
+    fetch('http://example.com/movies.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
-  this.getImage = () => {
-    fetch("https://api.unsplash.com/photos/random/?client_id=_____________")
-      .then((res) => res.json())
-      .then((resJson) => {
-        console.log(resJson.urls.regular);
-        this.setState({ imageUrl: resJson.urls.regular });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  }
 
-  // console.log('set state run')
-  // console.log(this.state)
 
   return (
     <View>
-      <Button
-        onPress={this.getImage}
-        title="PRESS ME"
-        color="#841584"
-        accessibilityLabel="Click this button to get a random image"
-      />
-
-      <Image
-        source={{ uri: this.state.imageUrl }}
-        style={{ width: 100, height: 100 }}
-      />
+      <Image source={{ uri: 'https://i.ytimg.com/vi/fmaiEWLdU6Q/sddefault.jpg'}} style={styles.image} />
+      <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text>SuperLike</Text>
+      </TouchableOpacity>
     </View>
   );
 }
+//'https://dog.ceo/api/breeds/image/random'
+
+const styles = StyleSheet.create({
+  image: {
+    height: 100,
+    width: 100,
+  },
+  button: {
+    backgroundColor: 'pink'
+  }
+});
+

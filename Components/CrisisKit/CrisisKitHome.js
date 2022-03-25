@@ -56,11 +56,11 @@ export default function CrisisKitHome({ navigation }) {
             dot={require("../graphics/tealDot.png")}
           />
 
-          {/* <NavDotLeft
+          <NavDotLeft
             navigation={() => navigation.navigate("Practice")}
             title="practice"
             dot={require("../graphics/tealDot.png")}
-          /> */}
+          />
         </View>
       </View>
       <Footer />
