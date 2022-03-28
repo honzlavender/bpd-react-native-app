@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
       fontSize: 30,
       marginTop: 65,
       marginLeft: 22,
-      color: 'lightblue'
+      // color: '#005b7d',
+      color: '#fbdb39'
     },
 })

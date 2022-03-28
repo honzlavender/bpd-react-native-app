@@ -24,16 +24,16 @@ export default function SongWordCount({ navigation }) {
             times you hear these words or phrases
           </Text>
           <Text style={styles.textList}>
-            "Womanizer" x Britney Spears{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
-            "Lovely Day" x Bill Withers{"\n"}
+            • "Womanizer" x Britney Spears{"\n"}
+            • "Lovely Day" x Bill Withers{"\n"}
+            • "Roxanne" x The Police{"\n"}
+            • "Halo" x Beyonce'{"\n"}
+            • "New Day Rising" x Hüsker Dü{"\n"}
+            • "My Hump" x Black Eyed Peas{"\n"}
+            • "Let It Be" x The Beatles{"\n"}
+            • "My Name is.." x Eminem{"\n"}
+            • "I get knocked down"{'\n'}(Tubthumping) x Chumbawamba{"\n"}
+            • "Donk" x Soulja Boy{"\n"}
           </Text>
           {/* <FlatList 
         data={[
@@ -92,27 +92,27 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   instructions: {
-    padding: 14,
+    padding: 16,
     marginHorizontal: 26,
     backgroundColor: "#fff",
     borderRadius: 50,
-    height: 540,
+    height: 520,
   },
   text: {
     fontFamily: "Fredoka-Bold",
     marginVertical: 12,
     marginHorizontal: 28,
     color: "#303746",
-    fontSize: 16,
+    fontSize: 18,
   },
   textList: {
-    fontFamily: "Fredoka-Regular",
-    marginVertical: 4,
+    fontFamily: "Fredoka-Bold",
+    marginVertical: 14,
     marginHorizontal: 32,
     fontSize: 15,
     textTransform: "lowercase",
     color: "#f8757f",
-    textAlign: "center",
+    // textAlign: "center",
   },
   dot: {
     resizeMode: "contain",
