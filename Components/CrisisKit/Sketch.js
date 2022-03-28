@@ -1,82 +1,57 @@
 // sketch.js
 
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Button,
+  Alert,
+  Share
+} from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
-import { useEffect, useRef, useState } from "react";
-import Canvas from "react-native-canvas";
+import { useRef } from "react";
+import { Canvas } from "@benjeau/react-native-draw";
+import { captureRef } from "react-native-view-shot";
 
 export default function Sketch({ navigation }) {
+  //hands sketch, undo and clear
+  const viewRef = useRef();
   const canvasRef = useRef(null);
-  const contextRef = useRef(null);
-  const [isDrawing, setIsDrawing] = useState(false);
 
-  // const refreshDrawing = () => {
-  //   // this.reload();
-  //   Sketch.reload();
-  // }
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-
-    // const handleCanvas = (canvas) => {
-    // if (canvas === null) {
-    //   return;
-    // }
-    const ctx = canvas.getContext("2d");
-    ctx.lineCap = "round";
-    ctx.strokeStyle = "black";
-    ctx.lineWidth = 5;
-    ctx.fillStyle = "pink";
-    ctx.fillRect(20, 20, 300, 300);
-    // }
-  });
-
-  const startDrawing = ({ nativeEvent }) => {
-    //how to start a path?
-    // alert('wow')
-    // const { offsetX, offsetY } = nativeEvent;
-    // contextRef.beginPath();
-    // contextRef.moveTo(offsetX, offsetY);
-    // setIsDrawing(true);
+  const handleUndo = () => {
+    canvasRef.current?.undo();
   };
 
-  const endDrawing = () => {
-    //how to end a path?
-    // alert('u did it')
-    // contextRef.closePath();
-    // setIsDrawing(false);
+  const handleClear = () => {
+    canvasRef.current?.clear();
   };
 
-  const draw = ({ nativeEvent }) => {
-    //how to connect path??
-    // if (!isDrawing) {
-    //   return;
-    // }
-    // const { offsetX, offsetY } = nativeEvent;
-    // contextRef.lineTo(offsetX, offsetY);
-    // contextRef.stroke();
+  //share and save
+  const onShare = async () => {
+    try {
+      const uri = await captureRef(viewRef, {
+        format: 'png',
+        quality: 0.7,
+      });
+      await Share.share({ url: uri })
+    } catch (error) {
+      alert(error.message);
+    }
   };
+
 
   return (
     <View style={styles.container}>
       <GoBackNav navigation={navigation} />
       <Text style={styles.sketchText}>{"sketch pad"}</Text>
-      <TouchableOpacity onPress={() => navigation.navigate("Sketch")}>
-        <Text style={styles.button}>refresh</Text>
-      </TouchableOpacity>
+      <Button title="Undo" onPress={handleUndo} />
+      <Button title="Clear" onPress={handleClear} />
 
-      <View
-        onTouchStart={startDrawing}
-        onTouchEnd={endDrawing}
-        onTouchMove={draw}
-      >
-        <Canvas
-          // onTouchStart={startDrawing}
-          // onTouchEnd={endDrawing}
-          // onTouchMove={draw}
-          ref={canvasRef}
-        />
+      <View ref={viewRef}>
+      <Canvas style={styles.canvas} ref={canvasRef} />
       </View>
+      <Button title="Share" onPress={onShare} />
     </View>
   );
 }
@@ -94,11 +69,19 @@ const styles = StyleSheet.create({
   },
   button: {
     color: "white",
-    backgroundColor: "blue",
+    backgroundColor: "lightblue",
     width: 100,
     padding: 24,
     margin: 24,
     fontWeight: "bold",
+    textAlign: "center",
+  },
+  canvas: {
+    height: 300,
+    backgroundColor: 'lightblue'
+  },
+  text: {
+    fontSize: 16,
     textAlign: "center",
   },
 });
