@@ -16,7 +16,7 @@ export default function HomeButtons({
         onPress={navigation}
       >
           {/* customStyles let's be add individual styling to shared components */}
-          <Text style={[styles.appButtonSmallText]}>{smallTitle}</Text>
+          {/* <Text style={[styles.appButtonSmallText]}>{smallTitle}</Text> */}
           <Text style={[styles.appButtonText]}>{title}</Text>
       </TouchableOpacity>
     </View>
@@ -39,16 +39,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   appButtonText: {
+    fontFamily: 'Fredoka-Bold',
     textAlign: "center",
-    fontSize: 16,
-    fontWeight: "bold",
+    fontSize: 18,
     color: "#303746",
     textTransform: "uppercase",
   },
-  appButtonSmallText: {
-    textAlign: "center",
-    fontSize: 12,
-    color: "#303746",
-    paddingBottom: 5,
-  },
+  // appButtonSmallText: {
+  //   textAlign: "center",
+  //   fontSize: 12,
+  //   color: "#303746",
+  //   paddingBottom: 5,
+  // },
 });

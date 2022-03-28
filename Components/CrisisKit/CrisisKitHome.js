@@ -15,14 +15,14 @@ export default function CrisisKitHome({ navigation }) {
             style={styles.image}
           />
           <View style={styles.textView}>
-            <Text style={styles.title}>{"crisis kit"}</Text>
+            {/* <Text style={styles.title}>{"crisis kit"}</Text> */}
           </View>
         </View>
         <View style={styles.body}>
           {/* word game */}
           <NavDotLeft
             navigation={() => navigation.navigate("SongWordCount")}
-            title="word count game"
+            title="music & mindfulness"
             dot={require("../graphics/blueDot.png")}
           />
           <NavDotRight
@@ -32,7 +32,7 @@ export default function CrisisKitHome({ navigation }) {
           />
           <NavDotLeft
             navigation={() => navigation.navigate("BabyAnimals")}
-            title="cats & dogs for your woes"
+            title="animal content"
             dot={require("../graphics/redDot.png")}
           />
           <NavDotRight
@@ -56,11 +56,11 @@ export default function CrisisKitHome({ navigation }) {
             dot={require("../graphics/tealDot.png")}
           />
 
-          <NavDotLeft
+          {/* <NavDotLeft
             navigation={() => navigation.navigate("Practice")}
             title="practice"
             dot={require("../graphics/tealDot.png")}
-          />
+          /> */}
         </View>
       </View>
       <Footer />

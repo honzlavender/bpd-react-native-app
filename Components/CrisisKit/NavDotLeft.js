@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   dotTextLeft: {
-    fontSize: 18,
+    fontFamily: 'Fredoka-Regular',
+    fontSize: 20,
     paddingHorizontal: 10,
     paddingVertical: 6,
-    fontWeight: "bold",
     color: "#303746",
   },
 });

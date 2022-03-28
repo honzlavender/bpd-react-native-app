@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
       {/* <Text>an honest app for</Text> */}
       <Text style={styles.homeTitle}>a crisis kit</Text>
       <Text style={styles.subTitle}>
-        for those of us with BPD & other spicy disorders
+        panic & anxiety attacks, episodes, & impulse control
       </Text>
       {/* <HomeButtons
         title="non-toxic support"
@@ -19,8 +19,8 @@ export default function Home({ navigation }) {
         source={require("../graphics/background.png")}
       />
       <HomeButtons
-        smallTitle={`(chuckles)`}
-        title={`i'm in danger`}
+        // smallTitle={`(chuckles)`}
+        title={`distract me`}
         customStyles={{ backgroundColor: "#fbdb39", color: "#807303" }}
         navigation={() => navigation.navigate("CrisisKitHome")}
       />
@@ -36,20 +36,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   subTitle: {
+    fontFamily: "Fredoka-Regular",
     zIndex: 1,
+    fontSize: 13,
   },
   homeTitle: {
-    fontFamily: 'Fredoka-Regular',
+    marginTop: 20,
+    fontFamily: "Fredoka-Bold",
     zIndex: 1,
     paddingHorizontal: 24,
     paddingVertical: 0,
     marginBottom: -8,
-    fontSize: 52,
+    fontSize: 70,
     color: "#303746",
   },
   pic: {
     resizeMode: "contain",
-    width: 450,
+    width: 600,
     position: "absolute",
   },
-}); 
+});

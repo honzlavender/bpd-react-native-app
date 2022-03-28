@@ -14,6 +14,7 @@ export default function GoBackNav({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
+    // backgroundColor: '#fff'
   },
   //redirect to Home page
   icon: {

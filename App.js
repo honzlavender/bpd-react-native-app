@@ -23,6 +23,7 @@ export default function App() {
   const [isLoaded] = useFonts({
     "Monofett-Regular": require("./assets/Fonts/Monofett-Regular.ttf"),
     "Fredoka-Regular": require("./assets/Fonts/Fredoka/Fredoka-Regular.ttf"),
+    "Fredoka-Bold": require("./assets/Fonts/Fredoka/Fredoka-Bold.ttf"),
   });
 
   if (!isLoaded) {

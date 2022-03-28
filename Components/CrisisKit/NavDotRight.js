@@ -29,11 +29,11 @@ const styles = StyleSheet.create({
     height: 75,
   },
   dotTextRight: {
+    fontFamily: 'Fredoka-Regular',
     textAlign: "right",
     marginTop: 20,
     marginLeft: -75,
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 20,
     color: "#303746",
   },
 });
