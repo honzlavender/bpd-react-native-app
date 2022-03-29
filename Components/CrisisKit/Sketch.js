@@ -68,7 +68,7 @@ export default function Sketch({ navigation }) {
           />
         </View>
         <TouchableOpacity style={styles.shareButton} onPress={onShare}>
-          <Text style={styles.shareText}>share & save</Text>
+          <Text style={styles.shareText}>save & share</Text>
         </TouchableOpacity>
       </View>
     </View>

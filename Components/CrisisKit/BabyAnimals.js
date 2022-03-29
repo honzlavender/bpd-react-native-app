@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Image,
+  TouchableOpacity,
+  Text,
+  ImageBackground,
+  ScrollView
+} from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 
 export default function BabyAnimals({ navigation }) {
@@ -26,43 +34,83 @@ export default function BabyAnimals({ navigation }) {
   }, []);
 
   return (
-    <>
+    <ScrollView style={styles.pageContainer}>
       <GoBackNav navigation={navigation} />
       <View style={styles.container}>
-        <Image source={{ uri: dog || null }} style={styles.image} />
+        <Image source={require("../graphics/tealDot.png")} style={styles.dot} />
+
+        <ImageBackground
+          source={require("../graphics/frame.png")}
+          style={styles.frame}
+          resizeMode="cover"
+        >
+          <Image source={{ uri: dog || null }} style={styles.image} />
+        </ImageBackground>
+
         <TouchableOpacity style={styles.button} onPress={fetchDog}>
-          <Text style={styles.text}>New Dog</Text>
+          <Text style={styles.text}>fetch dog</Text>
         </TouchableOpacity>
 
-        <Image source={{ uri: cat || null }} style={styles.image} />
+        <ImageBackground
+          source={require("../graphics/frame.png")}
+          style={styles.frame}
+          resizeMode="cover"
+        >
+          <Image source={{ uri: cat || null }} style={styles.image} />
+        </ImageBackground>
+
         <TouchableOpacity style={styles.button} onPress={fetchCat}>
-          <Text style={styles.text}>New Cat</Text>
+          <Text style={styles.text}>pspspsps</Text>
         </TouchableOpacity>
       </View>
-    </>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  pageContainer: {
+    backgroundColor: '#ffdb0050'
+  },
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
   },
+  dot: {
+    margin: 12,
+    resizeMode: "contain",
+    width: 60,
+    height: 60,
+  },
+  frame: {
+    flex: 1,
+    height: 300,
+    width: 330,
+  },
   image: {
+    marginTop: 50,
+    resizeMode: "cover",
+    zIndex: -1,
     height: 200,
     width: 200,
+    margin: 20,
+    alignSelf: "center",
   },
   button: {
-    margin: 24,
-    padding: 12,
-    borderRadius: 50,
-    width: 150,
-    backgroundColor: "lightblue",
+    // margin: 60,
+    marginTop: -65,
+    marginBottom: 65,
+    padding: 4,
+    // borderColor: '#2c0e00',
+    borderWidth: 2,
+    borderRadius: 5,
+    width: 125,
+    backgroundColor: "#ffdb0085",
   },
   text: {
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: 18,
+    color: '#2c0e00',
     textAlign: "center",
+    fontFamily: 'Fredoka-Regular'
   },
 });

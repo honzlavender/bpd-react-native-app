@@ -15,7 +15,7 @@ export default function CrisisKitHome({ navigation }) {
             style={styles.image}
           />
           <View style={styles.textView}>
-            {/* <Text style={styles.title}>{"crisis kit"}</Text> */}
+            {/* <Text style={styles.title}>{"When I'm *in it* the last thing I want to do is meditate or be alone in my mind"}</Text> */}
           </View>
         </View>
         <View style={styles.body}>
@@ -84,9 +84,9 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 75,
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "white",
+    fontSize: 18,
+    width: 300,
+    fontFamily: "Fredoka-Regular",
   },
   image: {
     resizeMode: "contain",

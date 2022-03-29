@@ -18,9 +18,7 @@ export default function SongWordCount({ navigation }) {
       <View style={styles.container}>
         <Image source={require("../graphics/pinkDot.png")} style={styles.dot} />
         <View style={styles.instructions}>
-          <Text style={styles.text}>
-            When I'm *in it* the last thing I want to do is meditate or be alone
-            in my mind.{"\n\n"}Instructions:{"\n"}Listen and count how many
+          <Text style={styles.text}>Instructions:{"\n"}Listen and count how many
             times you hear these words or phrases
           </Text>
           <Text style={styles.textList}>
@@ -80,14 +78,15 @@ const styles = StyleSheet.create({
     marginHorizontal: 26,
     backgroundColor: "#fff",
     borderRadius: 50,
-    height: 520,
+    height: 450,
   },
   text: {
     fontFamily: "Fredoka-Bold",
-    marginVertical: 12,
+    marginTop: 32,
+    marginBottom: 12,
     marginHorizontal: 28,
     color: "#303746",
-    fontSize: 18,
+    fontSize: 22,
   },
   textList: {
     fontFamily: "Fredoka-Bold",
@@ -102,6 +101,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: 75,
     height: 75,
-    marginBottom: 24,
+    marginBottom: 48,
   },
 });
