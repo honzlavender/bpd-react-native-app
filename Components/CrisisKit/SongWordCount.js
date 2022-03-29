@@ -19,7 +19,7 @@ export default function SongWordCount({ navigation }) {
         <Image source={require("../graphics/pinkDot.png")} style={styles.dot} />
         <View style={styles.instructions}>
           <Text style={styles.text}>Instructions:{"\n"}Listen and count how many
-            times you hear these words or phrases
+            times you hear these words or phrases in the songs
           </Text>
           <Text style={styles.textList}>
             • "Womanizer" x Britney Spears{"\n"}
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 26,
     backgroundColor: "#fff",
     borderRadius: 50,
-    height: 450,
+    height: 480,
   },
   text: {
     fontFamily: "Fredoka-Bold",
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     marginHorizontal: 28,
     color: "#303746",
-    fontSize: 22,
+    fontSize: 20,
   },
   textList: {
     fontFamily: "Fredoka-Bold",

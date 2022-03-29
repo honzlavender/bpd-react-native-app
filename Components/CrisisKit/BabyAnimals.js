@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Text,
   ImageBackground,
-  ScrollView
+  ScrollView,
 } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 
@@ -38,7 +38,7 @@ export default function BabyAnimals({ navigation }) {
       <GoBackNav navigation={navigation} />
       <View style={styles.container}>
         <Image source={require("../graphics/tealDot.png")} style={styles.dot} />
-
+        {/* fetch dog api */}
         <ImageBackground
           source={require("../graphics/frame.png")}
           style={styles.frame}
@@ -48,9 +48,10 @@ export default function BabyAnimals({ navigation }) {
         </ImageBackground>
 
         <TouchableOpacity style={styles.button} onPress={fetchDog}>
-          <Text style={styles.text}>fetch dog</Text>
+          <Text style={styles.text}>next dog</Text>
         </TouchableOpacity>
 
+        {/* fetch cat api */}
         <ImageBackground
           source={require("../graphics/frame.png")}
           style={styles.frame}
@@ -60,8 +61,32 @@ export default function BabyAnimals({ navigation }) {
         </ImageBackground>
 
         <TouchableOpacity style={styles.button} onPress={fetchCat}>
-          <Text style={styles.text}>pspspsps</Text>
+          <Text style={styles.text}>next cat</Text>
         </TouchableOpacity>
+
+        {/* baby snoopy */}
+        <ImageBackground
+          source={require("../graphics/frame.png")}
+          style={styles.frame}
+          resizeMode="cover"
+        >
+          <Image
+            source={require("../graphics/babySnoopy.jpg")}
+            style={styles.image}
+          />
+        </ImageBackground>
+
+        {/* curly joe */}
+        {/* <ImageBackground
+          source={require("../graphics/frame.png")}
+          style={styles.frame}
+          resizeMode="cover"
+        >
+          <Image
+            source={require("../graphics/curlyJoe.jpg")}
+            style={styles.image}
+          />
+        </ImageBackground> */}
       </View>
     </ScrollView>
   );
@@ -69,7 +94,7 @@ export default function BabyAnimals({ navigation }) {
 
 const styles = StyleSheet.create({
   pageContainer: {
-    backgroundColor: '#ffdb0050'
+    backgroundColor: "#ffdb0050",
   },
   container: {
     flex: 1,
@@ -109,8 +134,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    color: '#2c0e00',
+    color: "#2c0e00",
     textAlign: "center",
-    fontFamily: 'Fredoka-Regular'
+    fontFamily: "Fredoka-Regular",
   },
 });
