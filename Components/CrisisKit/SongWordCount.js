@@ -35,21 +35,6 @@ export default function SongWordCount({ navigation }) {
             • "I get knocked down"{'\n'}(Tubthumping) x Chumbawamba{"\n"}
             • "Donk" x Soulja Boy{"\n"}
           </Text>
-          {/* <FlatList 
-        data={[
-          {key: '"Womanizer" x Britney Spears'},
-          {key: '"Lovely Day" x Bill Withers'},
-          {key: '"Roxanne" x The Police'},
-          {key: '"Halo" x Beyonce'},
-          {key: '"New Day Rising" x Hüsker Dü'},
-          {key: '"My Hump" x Black Eyed Peas'},
-          {key: '"Let It Be" x The Beatles'},
-          {key: '"My Name is.." x Eminem'},
-          {key: '"I get knocked down" (Tubthumping) x Chumbawamba'},
-          {key: '"Donk" x Soulja Boy'},
-        ]}
-        renderItem={({item}) => <Text style={styles.textList}>{item.key}</Text>}
-      /> */}
         </View>
         <TouchableOpacity
           onPress={() => {
@@ -70,19 +55,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    // backgroundColor: "white",
     marginBottom: 50,
   },
   pageContainer: {
     backgroundColor: "#005b7d",
-    // marginBottom: 24,
   },
   playListLink: {
     fontFamily: "Fredoka-Bold",
     textAlign: "center",
     color: "#303746",
-    fontSize: 17,
-    padding: 4,
+    fontSize: 14,
+    textTransform: 'uppercase',
+    padding: 2,
   },
   playlistButton: {
     marginTop: -40,
@@ -112,7 +96,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textTransform: "lowercase",
     color: "#f8757f",
-    // textAlign: "center",
   },
   dot: {
     resizeMode: "contain",

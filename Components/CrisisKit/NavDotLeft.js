@@ -16,7 +16,7 @@ export default function NavDotLeft({ dot, title, navigation }) {
 const styles = StyleSheet.create({
   dotBody: {
     marginLeft: 75,
-    marginTop: 20,
+    marginTop: 16,
     position: "absolute",
     borderRadius: 100,
     // backgroundColor: "#fff",
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   dotTextLeft: {
-    fontFamily: 'Fredoka-Regular',
-    fontSize: 20,
+    fontFamily: 'Fredoka-Bold',
+    fontSize: 18,
     paddingHorizontal: 10,
     paddingVertical: 6,
     color: "#303746",

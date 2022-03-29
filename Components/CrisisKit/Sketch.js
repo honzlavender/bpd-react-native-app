@@ -6,8 +6,9 @@ import {
   StyleSheet,
   TouchableOpacity,
   Button,
-  Alert,
-  Share
+  Image,
+  Share,
+  ScrollView,
 } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 import { useRef } from "react";
@@ -31,57 +32,103 @@ export default function Sketch({ navigation }) {
   const onShare = async () => {
     try {
       const uri = await captureRef(viewRef, {
-        format: 'png',
+        format: "png",
         quality: 0.7,
       });
-      await Share.share({ url: uri })
+      await Share.share({ url: uri });
     } catch (error) {
       alert(error.message);
     }
   };
 
-
   return (
-    <View style={styles.container}>
+    <View style={styles.pageContainer}>
       <GoBackNav navigation={navigation} />
-      <Text style={styles.sketchText}>{"sketch pad"}</Text>
-      <Button title="Undo" onPress={handleUndo} />
-      <Button title="Clear" onPress={handleClear} />
-
-      <View ref={viewRef}>
-      <Canvas style={styles.canvas} ref={canvasRef} />
+      <View style={styles.container}>
+        <Image
+          source={require("../graphics/yellowDot.png")}
+          style={styles.dot}
+        />
+        {/* <Text style={styles.sketchText}>{"sketch pad"}</Text> */}
+        <View style={styles.topButtons}>
+          <TouchableOpacity onPress={handleUndo}>
+            <Text style={styles.topButtText}>Undo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleClear}>
+            <Text style={styles.topButtText}>Clear</Text>
+          </TouchableOpacity>
+        </View>
+        <Text style={styles.sketchText}>{"draw a corndog"}</Text>
+        <View ref={viewRef} style={styles.frame}>
+          <Canvas
+            color="#005014"
+            thickness={10}
+            style={styles.canvas}
+            ref={canvasRef}
+          />
+        </View>
+        <TouchableOpacity style={styles.shareButton} onPress={onShare}>
+          <Text style={styles.shareText}>share & save</Text>
+        </TouchableOpacity>
       </View>
-      <Button title="Share" onPress={onShare} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  pageContainer: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#005014",
+  },
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
   },
   sketchText: {
+    fontFamily: "Fredoka-Regular",
     textAlign: "center",
-    // margin: 36,
-    fontSize: 32,
+    fontSize: 14,
+    marginBottom: -35,
+    zIndex: 10,
     fontWeight: "bold",
-  },
-  button: {
-    color: "white",
-    backgroundColor: "lightblue",
-    width: 100,
-    padding: 24,
-    margin: 24,
-    fontWeight: "bold",
-    textAlign: "center",
   },
   canvas: {
-    height: 300,
-    backgroundColor: 'lightblue'
+    zIndex: -1,
+    width: 325,
+    height: 500,
+    borderRadius: 50,
   },
-  text: {
-    fontSize: 16,
+  shareButton: {
+    marginTop: -30,
+    borderRadius: 50,
+    width: 150,
+    backgroundColor: "#ffdb00",
+    padding: 20,
+  },
+  topButtons: {
+    flexDirection: "row",
+    paddingBottom: 18,
+  },
+  topButtText: {
+    fontFamily: "Fredoka-Bold",
+    fontSize: 18,
+    marginVertical: 10,
+    marginHorizontal: 20,
+    color: "#fff",
+    padding: 8,
+    textTransform: "uppercase",
+  },
+  shareText: {
+    fontFamily: "Fredoka-Bold",
     textAlign: "center",
+    color: "#303746",
+    fontSize: 14,
+    textTransform: "uppercase",
+    padding: 2,
+  },
+  dot: {
+    resizeMode: "contain",
+    width: 75,
+    height: 75,
   },
 });
