@@ -139,7 +139,7 @@ export default function FlappyBird({ navigation }) {
 
           <Bird birdBottom={birdBottom} birdLeft={birdLeft} />
           <Obstacles
-            color={"green"}
+            color={"#ff6c7c"}
             obstacleWidth={obstacleWidth}
             obstacleHeight={obstacleHeight}
             randomBottom={obstaclesNegHeight}
@@ -147,7 +147,7 @@ export default function FlappyBird({ navigation }) {
             obstaclesLeft={obstaclesLeft}
           />
           <Obstacles
-            color={"yellow"}
+            color={"#ff5900"}
             obstacleWidth={obstacleWidth}
             obstacleHeight={obstacleHeight}
             randomBottom={obstaclesNegHeightTwo}
@@ -163,7 +163,7 @@ export default function FlappyBird({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#191c24",
   },
   playListLink: {
     textAlign: "center",
@@ -172,10 +172,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   buttonText: {
+    zIndex: 10,
     color: "white",
     backgroundColor: "pink",
     width: 100,
-    borderRadius: 30,
+    borderRadius: 50,
     padding: 14,
     margin: 24,
     fontWeight: "bold",

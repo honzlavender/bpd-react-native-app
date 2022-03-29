@@ -1,19 +1,32 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 
 export default function Bird({birdBottom, birdLeft}){
-    const birdWidth = 50
-    const birdHeight = 60
+    const birdWidth = 130
+    const birdHeight = 50
 
     return (
-        <View style={{
+        <Image 
+        source={require("../../graphics/flappyRat.png")}
+
+        style={{
             borderRadius: 50,
             position: 'absolute',
-            backgroundColor: 'blue',
+            backgroundColor: '#191c24',
             width: birdWidth,
             height: birdHeight,
             left: birdLeft - (birdWidth/2),
             bottom: birdBottom - (birdHeight/2),
-        }}></View>
+        }}/>
     )
 }
+
+{/* <View style={{
+    borderRadius: 50,
+    position: 'absolute',
+    backgroundColor: 'blue',
+    width: birdWidth,
+    height: birdHeight,
+    left: birdLeft - (birdWidth/2),
+    bottom: birdBottom - (birdHeight/2),
+}}></View> */}
