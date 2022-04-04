@@ -127,16 +127,8 @@ export default function FlappyBird({ navigation }) {
   return (
     <View style={styles.container}>
       <GoBackNav navigation={navigation} />
-      {/* <Text style={styles.playListLink}>{"flap that bird"}</Text> */}
       <TouchableWithoutFeedback onPress={jump}>
         <View style={styles.container}>
-          {isGameOver && (
-            <TouchableOpacity style={styles.gameOver} onPress={resetGame}>
-              <Text style={styles.score}>Score: {score}</Text>
-              <Text style={styles.buttonText}>refresh</Text>
-            </TouchableOpacity>
-          )}
-
           <Bird birdBottom={birdBottom} birdLeft={birdLeft} />
           <Obstacles
             color={"#ff6c7c"}
@@ -154,6 +146,12 @@ export default function FlappyBird({ navigation }) {
             gap={gap}
             obstaclesLeft={obstaclesLeftTwo}
           />
+          {isGameOver && (
+            <TouchableOpacity style={styles.gameOver} onPress={resetGame}>
+              <Text style={styles.score}>Score: {score}</Text>
+              <Text style={styles.buttonText}>play again</Text>
+            </TouchableOpacity>
+          )}
         </View>
       </TouchableWithoutFeedback>
     </View>
@@ -165,27 +163,29 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#191c24",
   },
-  playListLink: {
-    textAlign: "center",
-    // margin: 36,
-    fontSize: 32,
-    fontWeight: "bold",
-  },
   buttonText: {
-    zIndex: 10,
+    fontSize: 24,
     color: "white",
-    backgroundColor: "pink",
-    width: 100,
-    borderRadius: 50,
-    padding: 14,
-    margin: 24,
+    fontFamily: "Fredoka-Regular",
+    // padding: 14,
+    // margin: 24,
     fontWeight: "bold",
     textAlign: "center",
   },
   score: {
-    padding: 14,
-    // margin: 24,
+    textTransform: 'uppercase',
+    fontFamily: "Fredoka-Bold",
+    fontSize: 42,
+    color: '#191c24',
     fontWeight: "bold",
-    // textAlign: "center",
+    textAlign: "center",
+  },
+  gameOver: {
+    margin: 25,
+    justifyContent: 'center',
+    backgroundColor: "pink",
+    borderRadius: 100,
+    width: 200,
+    height: 200,
   }
 });

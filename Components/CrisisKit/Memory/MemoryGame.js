@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Dimensions,
   SafeAreaView,
+  Image,
 } from "react-native";
 // import GoBackNav from "../../Misc/GoBackNav";
 import GoBackNav from "../../Misc/GoBackNav";
@@ -108,52 +109,56 @@ export default function MemoryGame({ navigation }) {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.page}>
       <GoBackNav navigation={navigation} />
-      <Text style={styles.heading}>{"memory game"}</Text>
-
-      <View style={styles.main}>
-        <View style={styles.gameBoard}>
-          {cardRandom.map((symbol, index) => (
-            <Card
-              key={index}
-              onPress={() => cardPressHandler(index)}
-              style={styles.button}
-              fontSize={30}
-              title={symbol}
-              // cover="❓"
-              isShow={isOpen[index]}
-            />
-          ))}
+      <View style={styles.container}>
+        <Image
+          source={require("../../graphics/pinkDot.png")}
+          style={styles.dot}
+        />
+        <View style={styles.main}>
+          <View style={styles.gameBoard}>
+            {cardRandom.map((symbol, index) => (
+              <Card
+                key={index}
+                onPress={() => cardPressHandler(index)}
+                style={styles.button}
+                fontSize={30}
+                title={symbol}
+                // cover="❓"
+                isShow={isOpen[index]}
+              />
+            ))}
+          </View>
+        </View>
+        <View style={styles.footer}>
+          {/* {end ? ( */}
+            <TouchableOpacity onPress={resetGame} style={styles.tryAgainButton}>
+              <Text style={styles.tryAgainButtonText}>Play Again!</Text>
+            </TouchableOpacity>
+          {/* // ) : null} */}
         </View>
       </View>
-      <View style={styles.footer}>
-        {end ? (
-          <TouchableOpacity onPress={resetGame} style={styles.tryAgainButton}>
-            <Text style={styles.tryAgainButtonText}>Play Again!</Text>
-          </TouchableOpacity>
-        ) : null}
-      </View>
-      <Footer />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: "#be4b57",
+  },
   container: {
     flex: 1,
-    backgroundColor: "white",
-  },
-  header: {
-    flex: 1,
-    backgroundColor: "#eee",
-    justifyContent: "center",
+    backgroundColor: "#be4b57",
     alignItems: "center",
+    justifyContent: "center",
   },
-  heading: {
-    fontSize: 32,
-    fontWeight: "bold",
-    textAlign: "center",
+  dot: {
+    margin: 12,
+    resizeMode: "contain",
+    width: 80,
+    height: 80,
   },
   main: {
     flex: 3,
@@ -169,19 +174,27 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    alignContent: "center",
+
+    backgroundColor: '#ff6c7c',
+    paddingTop: 25,
+    borderRadius: 50,
+    marginHorizontal: 26,
+    marginTop: 45,
+    maxHeight: 400,
   },
   tryAgainButton: {
-    backgroundColor: "lightblue",
+    backgroundColor: "#005b7d",
     padding: 8,
-    marginTop: -100,
-    //  width: 100,
+    marginTop: -250,
     borderRadius: 8,
   },
   tryAgainButtonText: {
-    color: "white",
-    fontWeight: 'bold',
+    // ff6c7c
+    // color: "#005b7d",
+    color: "#ff6c7c",
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 28,
+    padding: 8,
+    fontFamily: "Fredoka-Bold",
   },
 });

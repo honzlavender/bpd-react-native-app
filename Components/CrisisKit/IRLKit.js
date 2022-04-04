@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { FlatList } from "react-native-gesture-handler";
 import GoBackNav from "../Misc/GoBackNav";
 
 export default function IRLKit({ navigation }) {
+
   return (
     <View style={styles.container}>
       <GoBackNav navigation={navigation} />
-        <Text style={styles.playListLink}>{"DIY IRL Crisi Kit"}</Text>
+      <Text> </Text>
     </View>
   );
 }
@@ -17,7 +19,6 @@ const styles = StyleSheet.create({
   },
   playListLink: {
     textAlign: "center",
-    // margin: 36,
     fontSize: 32,
     fontWeight: 'bold',
   },

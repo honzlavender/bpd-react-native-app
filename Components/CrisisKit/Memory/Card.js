@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
   },
   cardBox: {
     backgroundColor: "pink",
-    borderRadius: 8,
+    borderRadius: 80,
     width: 48,
     height: 48,
     justifyContent: "center",
     alignItems: "center",
-    margin: (Dimensions.get("window").width - 48 * 4) / (5 * 2),
+    margin: (Dimensions.get("window").width - 60 * 4) / (5 * 2),
   },
 });

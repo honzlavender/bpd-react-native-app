@@ -37,12 +37,12 @@ export default function CrisisKitHome({ navigation }) {
           />
           <NavDotRight
             navigation={() => navigation.navigate("FlappyBird")}
-            title="flappy bird"
+            title="flappy rat"
             dot={require("../graphics/limeDot.png")}
           />
           <NavDotLeft
             navigation={() => navigation.navigate("MemoryGame")}
-            title="memory game"
+            title="match the 'moji's"
             dot={require("../graphics/yellowDot.png")}
           />
           <NavDotRight
