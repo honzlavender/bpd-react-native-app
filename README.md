@@ -1,5 +1,5 @@
 # A Crisis Kit 
-an distraction app for panic & anxiety attacks, episodes, and impulse control
+a distraction app for panic & anxiety attacks, episodes, and impulse control
 
 ## Getting Started
 
