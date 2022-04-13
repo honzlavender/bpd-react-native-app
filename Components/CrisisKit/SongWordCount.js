@@ -4,7 +4,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  FlatList,
 } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 import * as Linking from "expo-linking";

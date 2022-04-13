@@ -183,7 +183,8 @@ const styles = StyleSheet.create({
     maxHeight: 400,
   },
   tryAgainButton: {
-    backgroundColor: "#005b7d",
+    backgroundColor: "pink",
+    // backgroundColor: "#005b7d",
     padding: 8,
     marginTop: -250,
     borderRadius: 8,

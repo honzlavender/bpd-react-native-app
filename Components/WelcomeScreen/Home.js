@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
       {/* <Text>an honest app for</Text> */}
       <Text style={styles.homeTitle}>a crisis kit</Text>
       <Text style={styles.subTitle}>
-        panic / anxiety attacks, episodes, & impulse control
+        panic & anxiety attacks, episodes, & impulse control
       </Text>
       {/* <HomeButtons
         title="non-toxic support"
