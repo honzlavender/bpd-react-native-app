@@ -17,6 +17,20 @@ And suggested install of Expo Simulator
 npm install --global expo-cli
 ```
 
+### Installation
+
+
+1. Download project zip file & open in local IDE
+
+2. open terminal, cd to target project, and install dependencies
+  ```
+  npm install
+  ```
+3. Run Expo
+  ```
+  expo start
+  ```
+
 ### 🚧 under construction 🚧 
 
 ## Homepage Preview
