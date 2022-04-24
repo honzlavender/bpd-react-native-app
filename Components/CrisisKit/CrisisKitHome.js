@@ -57,8 +57,8 @@ export default function CrisisKitHome({ navigation }) {
           />
 
           {/* <NavDotLeft
-            navigation={() => navigation.navigate("Practice")}
-            title="practice"
+            navigation={() => navigation.navigate("IosFonts")}
+            title="fonts"
             dot={require("../graphics/tealDot.png")}
           /> */}
         </View>

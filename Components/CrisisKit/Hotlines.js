@@ -5,14 +5,32 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  TextInput,
+  Button,
+  FlatList,
 } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 import * as Linking from "expo-linking";
+import ToDoList from "./HotlineList/CustomHotline";
+
+const personalNumbers = () => {
+  return (
+    <View>
+      <TextInput
+        style={styles.input}
+        placeholder="new todo..."
+        // onChangeText={changeHandler}
+      />
+      <Button
+        onPress={() => submitHandler(text)}
+        title="add todo"
+        color="coral"
+      />
+    </View>
+  );
+};
 
 export default function Hotlines({ navigation }) {
-  const onClick = () => {
-    Linking.openURL("tel://231323312");
-  };
 
   return (
     <ScrollView style={styles.pageContainer}>
@@ -33,6 +51,8 @@ export default function Hotlines({ navigation }) {
           >
             <Text style={styles.hotlineText}>Call & Oats</Text>
           </TouchableOpacity>
+
+          <ToDoList />
         </View>
       </View>
     </ScrollView>
@@ -57,7 +77,6 @@ const styles = StyleSheet.create({
   },
   numberBox: {
     padding: 16,
-    // marginHorizontal: 26,
     backgroundColor: "pink",
     borderRadius: 50,
     width: 325,

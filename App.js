@@ -12,6 +12,8 @@ import MemoryGame from "./Components/CrisisKit/Memory/MemoryGame";
 import IRLKit from "./Components/CrisisKit/IRLKit";
 import Hotlines from "./Components/CrisisKit/Hotlines";
 
+import IosFonts from "./Components/Misc/iosFonts";
+
 import { useFonts } from "@use-expo/font";
 import AppLoading from "expo-app-loading";
 import Practice from "./Components/Misc/Practice";
@@ -79,9 +81,14 @@ export default function App() {
             options={{ headerShown: false }}
           />
 
-          <Stack.Screen
+          {/* <Stack.Screen
             name="Practice"
             component={Practice}
+            options={{ headerShown: false }}
+          /> */}
+          <Stack.Screen
+            name="IosFonts"
+            component={IosFonts}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
