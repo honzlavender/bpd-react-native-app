@@ -113,7 +113,7 @@ export default function MemoryGame({ navigation }) {
       <GoBackNav navigation={navigation} />
       <View style={styles.container}>
         <Image
-          source={require("../../graphics/pinkDot.png")}
+          source={require("../../../assets/graphics/pinkDot.png")}
           style={styles.dot}
         />
         <View style={styles.main}>

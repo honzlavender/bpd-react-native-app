@@ -16,7 +16,7 @@ export default function Home({ navigation }) {
       /> */}
       <Image
         style={styles.pic}
-        source={require("../graphics/background.png")}
+        source={require("../../assets/graphics/background.png")}
       />
       <HomeButtons
         // smallTitle={`(chuckles)`}

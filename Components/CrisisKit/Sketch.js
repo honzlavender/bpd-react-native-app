@@ -46,7 +46,7 @@ export default function Sketch({ navigation }) {
       <GoBackNav navigation={navigation} />
       <View style={styles.container}>
         <Image
-          source={require("../graphics/yellowDot.png")}
+          source={require("../../assets/graphics/yellowDot.png")}
           style={styles.dot}
         />
         {/* <Text style={styles.sketchText}>{"sketch pad"}</Text> */}

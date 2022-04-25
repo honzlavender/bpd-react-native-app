@@ -11,7 +11,7 @@ export default function CrisisKitHome({ navigation }) {
         <BackHomeNav navigation={() => navigation.navigate("Home")} />
         <View style={styles.headerContainer}>
           <Image
-            source={require("../graphics/sunshine.png")}
+            source={require("../../assets/graphics/sunshine.png")}
             style={styles.image}
           />
           <View style={styles.textView}>
@@ -23,43 +23,43 @@ export default function CrisisKitHome({ navigation }) {
           <NavDotLeft
             navigation={() => navigation.navigate("SongWordCount")}
             title="music & mindfulness"
-            dot={require("../graphics/blueDot.png")}
+            dot={require("../../assets/graphics/blueDot.png")}
           />
           <NavDotRight
             navigation={() => navigation.navigate("Sketch")}
             title="sketch pad"
-            dot={require("../graphics/purpleDot.png")}
+            dot={require("../../assets/graphics/purpleDot.png")}
           />
           <NavDotLeft
             navigation={() => navigation.navigate("BabyAnimals")}
             title="animal content"
-            dot={require("../graphics/redDot.png")}
+            dot={require("../../assets/graphics/redDot.png")}
           />
           <NavDotRight
             navigation={() => navigation.navigate("FlappyBird")}
             title="flappy rat"
-            dot={require("../graphics/limeDot.png")}
+            dot={require("../../assets/graphics/limeDot.png")}
           />
           <NavDotLeft
             navigation={() => navigation.navigate("MemoryGame")}
             title="match the 'moji's"
-            dot={require("../graphics/yellowDot.png")}
+            dot={require("../../assets/graphics/yellowDot.png")}
           />
           <NavDotRight
             navigation={() => navigation.navigate("IRLKit")}
             title="IRL crisis kit"
-            dot={require("../graphics/pinkDot.png")}
+            dot={require("../../assets/graphics/pinkDot.png")}
           />
           <NavDotLeft
             navigation={() => navigation.navigate("Hotlines")}
             title="hotlines"
-            dot={require("../graphics/tealDot.png")}
+            dot={require("../../assets/graphics/tealDot.png")}
           />
 
           {/* <NavDotLeft
             navigation={() => navigation.navigate("IosFonts")}
             title="fonts"
-            dot={require("../graphics/tealDot.png")}
+            dot={require("../../assets/graphics/tealDot.png")}
           /> */}
         </View>
       </View>

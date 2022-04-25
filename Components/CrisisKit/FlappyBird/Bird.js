@@ -7,7 +7,7 @@ export default function Bird({birdBottom, birdLeft}){
 
     return (
         <Image 
-        source={require("../../graphics/flappyRat.png")}
+        source={require("../../../assets/graphics/flappyRat.png")}
 
         style={{
             borderRadius: 50,

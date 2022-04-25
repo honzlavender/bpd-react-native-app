@@ -15,7 +15,7 @@ export default function SongWordCount({ navigation }) {
     <ScrollView style={styles.pageContainer}>
       <GoBackNav navigation={navigation} />
       <View style={styles.container}>
-        <Image source={require("../graphics/pinkDot.png")} style={styles.dot} />
+        <Image source={require("../../assets/graphics/pinkDot.png")} style={styles.dot} />
         <View style={styles.instructions}>
           <Text style={styles.text}>Instructions:{"\n"}Listen and count how many
             times you hear these words or phrases in the songs

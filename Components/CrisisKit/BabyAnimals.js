@@ -37,10 +37,10 @@ export default function BabyAnimals({ navigation }) {
     <ScrollView style={styles.pageContainer}>
       <GoBackNav navigation={navigation} />
       <View style={styles.container}>
-        <Image source={require("../graphics/tealDot.png")} style={styles.dot} />
+        <Image source={require("../../assets/graphics/tealDot.png")} style={styles.dot} />
         {/* fetch dog api */}
         <ImageBackground
-          source={require("../graphics/frame.png")}
+          source={require("../../assets/graphics/frame.png")}
           style={styles.frame}
           resizeMode="cover"
         >
@@ -53,7 +53,7 @@ export default function BabyAnimals({ navigation }) {
 
         {/* fetch cat api */}
         <ImageBackground
-          source={require("../graphics/frame.png")}
+          source={require("../../assets/graphics/frame.png")}
           style={styles.frame}
           resizeMode="cover"
         >
@@ -66,12 +66,12 @@ export default function BabyAnimals({ navigation }) {
 
         {/* baby snoopy */}
         <ImageBackground
-          source={require("../graphics/frame.png")}
+          source={require("../../assets/graphics/frame.png")}
           style={styles.frame}
           resizeMode="cover"
         >
           <Image
-            source={require("../graphics/babySnoopy.jpg")}
+            source={require("../../assets/graphics/babySnoopy.jpg")}
             style={styles.image}
           />
         </ImageBackground>
