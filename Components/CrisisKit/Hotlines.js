@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import GoBackNav from "../Misc/GoBackNav";
 import * as Linking from "expo-linking";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AntDesign } from "@expo/vector-icons";
 
 const HotlineItem = ({ item, deleteHandler }) => {
@@ -26,14 +26,16 @@ const HotlineItem = ({ item, deleteHandler }) => {
 };
 
 const AddHotline = ({ submitHandler }) => {
-  const initialFormState = {
-    person: "",
-    number: "",
-  };
-  const [formData, setFormData] = useState({...initialFormState});
 
-  const changeHandler = (formData) => {
-    setFormData(formData);
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+
+  const nameChangeHandler = (name) => {
+    setName(name);
+  };
+
+  const numberChangeHandler = (number) => {
+    setNumber(number);
   };
 
   return (
@@ -41,18 +43,18 @@ const AddHotline = ({ submitHandler }) => {
       <TextInput
         style={styles.input}
         placeholder="someone you trust..."
-        onChangeText={changeHandler}
-        value={formData.person}
+        onChangeText={nameChangeHandler}
+        value={name}
       />
       <TextInput
         style={styles.input}
         placeholder="phone number"
-        onChangeText={changeHandler}
-        value={formData.number}
+        onChangeText={numberChangeHandler}
+        value={number}
       />
       <TouchableOpacity
         style={styles.addNumberButton}
-        onPress={() => submitHandler(formData)}
+        onPress={() => submitHandler(name, number)}
       >
         <Text style={styles.addNumber}>add number</Text>
         <AntDesign name="pluscircle" size={18} color="#303746" />
@@ -70,15 +72,15 @@ export default function Hotlines({ navigation }) {
     });
   };
 
-  const submitHandler = (...formData) => {
-    if (!formData) {
+  const submitHandler = (name, number) => {
+    if (!name || !number) {
       Alert.alert("add some info");
     } else {
       setHotlines((prevHotlines) => {
         return [
           {
-            person: formData,
-            number: formData,
+            person: name,
+            number: number,
             key: Math.random().toString(),
           },
           ...prevHotlines,
@@ -86,20 +88,22 @@ export default function Hotlines({ navigation }) {
       });
     }
   };
-  // const submitHandler = (formData) => {
-  //   if (formData.length) {
-  //     setHotlines((prevTodos) => {
-  //       return [
-  //         { name: formData, key: Math.random().toString() },
-  //         ...prevTodos,
-  //       ];
-  //     });
-  //   } else {
-  //     Alert.alert("OOPS", "must be more than 3 characters", [
-  //       { text: "my bad" },
-  //     ]);
-  //   }
-  // };
+
+
+  useEffect(() => {
+    const json = localStorage.getItem("hotlineList");
+    const loadedNumbers = JSON.parse(json);
+    if (loadedNumbers) {
+      setHotlines(loadedNumbers);
+    }
+    const newJson = JSON.stringify(hotlines);
+    localStorage.setItem("hotlineList", newJson);
+  }, [hotlines]);
+
+  // useEffect(() => {
+  //   const json = JSON.stringify(list);
+  //   localStorage.setItem("list", json);
+  // }, [list]);
 
   return (
     <View style={styles.pageContainer}>
