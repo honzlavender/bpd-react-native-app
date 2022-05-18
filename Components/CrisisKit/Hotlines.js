@@ -29,10 +29,10 @@ const AddHotline = ({ submitHandler }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
-  function resetTextInput () {
-    setName('');
-    setNumber('');
- }
+  function resetTextInput() {
+    setName("");
+    setNumber("");
+  }
 
   return (
     <View>
@@ -53,7 +53,7 @@ const AddHotline = ({ submitHandler }) => {
         style={styles.addNumberButton}
         onPress={() => {
           submitHandler(name, number);
-          resetTextInput()
+          resetTextInput();
         }}
       >
         <Text style={styles.addNumber}>add number</Text>
@@ -106,8 +106,14 @@ export default function Hotlines({ navigation }) {
               Linking.openURL("tel://+1-719-266-2837");
             }}
           >
-            <Text style={styles.hotlineText}>Call & Oats</Text>
+            <Text style={styles.hotlineText}>
+              <AntDesign name="phone" size={20} color="#303746" />
+              {" Call & Oats"}
+            </Text>
           </TouchableOpacity>
+          <Text style={styles.subhead}>
+            you know who can help you best{"\n"}add your own people & numbers
+          </Text>
 
           <FlatList
             data={hotlines}
@@ -147,6 +153,7 @@ const styles = StyleSheet.create({
   },
   hotlines: {},
   hotlineTitle: {
+    color: '#303746',
     textAlign: "center",
     textTransform: "uppercase",
     fontFamily: "Fredoka-Bold",
@@ -158,6 +165,13 @@ const styles = StyleSheet.create({
     fontFamily: "Fredoka-Regular",
     fontSize: 24,
     padding: 12,
+    color: '#303746',
+  },
+  subhead: {
+    textAlign: "center",
+    fontFamily: "Fredoka-Regular",
+    fontSize: 16,
+    color: '#00ac1d'
   },
   input: {
     textAlign: "center",
