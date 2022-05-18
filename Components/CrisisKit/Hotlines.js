@@ -26,35 +26,35 @@ const HotlineItem = ({ item, deleteHandler }) => {
 };
 
 const AddHotline = ({ submitHandler }) => {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-
-  const nameChangeHandler = (name) => {
-    setName(name);
-  };
-
-  const numberChangeHandler = (number) => {
-    setNumber(number);
-  };
+  function resetTextInput () {
+    setName('');
+    setNumber('');
+ }
 
   return (
     <View>
       <TextInput
         style={styles.input}
         placeholder="someone you trust..."
-        onChangeText={nameChangeHandler}
+        onChangeText={(name) => setName(name)}
         value={name}
       />
       <TextInput
+        keyboardType="numeric"
         style={styles.input}
         placeholder="phone number"
-        onChangeText={numberChangeHandler}
+        onChangeText={(number) => setNumber(number)}
         value={number}
       />
       <TouchableOpacity
         style={styles.addNumberButton}
-        onPress={() => submitHandler(name, number)}
+        onPress={() => {
+          submitHandler(name, number);
+          resetTextInput()
+        }}
       >
         <Text style={styles.addNumber}>add number</Text>
         <AntDesign name="pluscircle" size={18} color="#303746" />
@@ -88,22 +88,6 @@ export default function Hotlines({ navigation }) {
       });
     }
   };
-
-
-  useEffect(() => {
-    const json = localStorage.getItem("hotlineList");
-    const loadedNumbers = JSON.parse(json);
-    if (loadedNumbers) {
-      setHotlines(loadedNumbers);
-    }
-    const newJson = JSON.stringify(hotlines);
-    localStorage.setItem("hotlineList", newJson);
-  }, [hotlines]);
-
-  // useEffect(() => {
-  //   const json = JSON.stringify(list);
-  //   localStorage.setItem("list", json);
-  // }, [list]);
 
   return (
     <View style={styles.pageContainer}>
