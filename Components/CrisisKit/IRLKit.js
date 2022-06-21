@@ -10,7 +10,7 @@ export default function IRLKit({ navigation }) {
     <View style={styles.page}>
 
       <Text style={styles.textList}>
-            • "Womanizer" x Britney Spears{"\n"}
+            • "slime"{"\n"}
             • "Lovely Day" x Bill Withers{"\n"}
             • "Roxanne" x The Police{"\n"}
             • "Halo" x Beyonce'{"\n"}
